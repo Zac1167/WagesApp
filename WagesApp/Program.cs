@@ -107,6 +107,8 @@ namespace WagesApp
             string employeeName = CheckName();
 
             //Display employee name
+            Console.Clear();
+
             Console.WriteLine($"{employeeName}:");
 
             int sumHours = 0;
@@ -137,12 +139,41 @@ namespace WagesApp
         //When run or Main process
         static void Main(string[] args)
         {
+            //Display a title and description for the program (ASCII)
+            Console.WriteLine
+                (
+                " __      __                    _             \n" +
+               @" \ \    / /_ _ __ _ ___ ___   /_\  _ __ _ __ "+"\n"+
+               @"  \ \/\/ / _` / _` / -_|_-<  / _ \| '_ \ '_ \ "+"\n"+
+               @"   \_/\_/\__,_\__, \___/__/ /_/ \_\ .__/ .__/ "+"\n" + 
+                "              |___/               |_|  |_|    \n"
+                );
+            Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+            Console.WriteLine
+                (
+                "Wages App will calculate the wages for each \n" +
+                "employee and display the hours worked for the\n" +
+                "week.\n" + 
+                "It will produce an employee summary, showing \n" +
+                "the tax to be deducted and the total owed.\n" +
+                "Lastly, Wages App will display which employee \n" +
+                "worked the most ours over the week.\n" +
+                "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+
+            Console.WriteLine("Press <Enter>");
+            Console.ReadLine();
+            Console.Clear();
+
             string flagMain = "";
             while (!flagMain.Equals("XXX"))
             {
+                Console.WriteLine("------------EMPLOYEE DATA------------"); 
+
                 OneEmployee();
 
                 flagMain = CheckFlag();
+
+                Console.Clear();
 
             }
 
